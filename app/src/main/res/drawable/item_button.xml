@@ -2,25 +2,25 @@
     <!-- Состояние кнопки, когда она нажата -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:topRightRadius="75dp"
-                android:bottomRightRadius="75dp" />
-            <solid android:color="#FF5722" />
+            <corners android:topRightRadius="35dp"
+                android:bottomRightRadius="35dp" />
+            <solid android:color="@color/pal1" />
         </shape>
     </item>
     <!-- Состояние кнопки, когда она в фокусе (получает фокус) -->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <corners android:topRightRadius="75dp"
-                android:bottomRightRadius="75dp" />
-            <solid android:color="#FFC107" />
+            <corners android:topRightRadius="35dp"
+                android:bottomRightRadius="35dp" />
+            <solid android:color="@color/pal2" />
         </shape>
     </item>
     <!-- Состояние кнопки по умолчанию (не нажата и не в фокусе) -->
     <item>
         <shape android:shape="rectangle">
-            <corners android:topRightRadius="75dp"
-                android:bottomRightRadius="75dp" />
-            <solid android:color="#3F51B5" />
+            <corners android:topRightRadius="35dp"
+                android:bottomRightRadius="35dp" />
+            <solid android:color="@color/pal3" />
         </shape>
     </item>
 </selector>

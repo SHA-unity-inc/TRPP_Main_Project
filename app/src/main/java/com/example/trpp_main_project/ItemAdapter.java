@@ -29,7 +29,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        holder.bind(itemList.get(position).name);
+        holder.bind(itemList.get(position));
     }
 
     @Override
@@ -48,9 +48,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             textView = itemView.findViewById(R.id.button_text);
         }
 
-        public void bind(String item) {
+        public void bind(SmartItem item) {
             // Устанавливаем данные в элементы макета
-            textView.setText(item);
+            textView.setText(item.name);
+            imageView.setImageResource(item.image);
             // Предполагая, что у вас есть изображения для каждого элемента, вы можете установить их здесь
             // imageView.setImageResource(R.drawable.your_image_resource);
         }

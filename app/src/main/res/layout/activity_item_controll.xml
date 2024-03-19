@@ -1,7 +1,7 @@
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/pal0">
 
     <!-- Верхняя панель с фиксированным размером -->
     <LinearLayout
@@ -9,25 +9,80 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/pal1"
         android:orientation="horizontal">
 
-        <!-- Ваши элементы в верхней панели -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text="Conn App"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="Designed by SHA \n Created by SHA"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
+    <!-- RecyclerView слева -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/center_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_panel"
         android:layout_below="@id/top_panel"
+        android:layout_toEndOf="@id/drawer_layout"
+        android:layout_alignParentLeft="true"
+        android:background="@color/pal0"
         android:orientation="horizontal">
-
-        <!-- Элементы в GridLayout -->
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <!-- DrawerLayout справа -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="355dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_panel"
+        android:layout_below="@id/top_panel"
+        android:layout_alignParentRight="true">
+
+        <!-- Основной контент -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Здесь находится ваш основной контент приложения -->
+            <LinearLayout
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@color/pal2">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Выдвигающаяся панель -->
+        <LinearLayout
+            android:id="@+id/drawer_panel"
+            android:layout_width="355dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="vertical"
+            android:background="@color/pal2">
+
+            <!-- Содержимое вашей выдвигающейся панели -->
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
     <!-- Нижняя панель с фиксированным размером -->
     <LinearLayout
@@ -35,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/pal1"
         android:orientation="horizontal">
 
         <!-- Ваши элементы в нижней панели -->
@@ -43,4 +98,3 @@
     </LinearLayout>
 
 </RelativeLayout>
-
