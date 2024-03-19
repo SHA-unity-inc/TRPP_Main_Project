@@ -1,0 +1,46 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Верхняя панель с фиксированным размером -->
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+
+        <!-- Ваши элементы в верхней панели -->
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_panel"
+        android:layout_below="@id/top_panel"
+        android:orientation="horizontal">
+
+        <!-- Элементы в GridLayout -->
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <!-- Нижняя панель с фиксированным размером -->
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_green_dark"
+        android:orientation="horizontal">
+
+        <!-- Ваши элементы в нижней панели -->
+
+    </LinearLayout>
+
+</RelativeLayout>
+
